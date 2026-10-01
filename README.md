@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+💌# A Little Something
 
-## Getting Started
+A small interactive web experience made to deliver a simple message in a more personal and memorable way.
 
-First, run the development server:
+A Little Something is a modern, interactive gift-message website built with Next.js. Instead of presenting a message all at once, the project takes the user through a series of small steps, creating a simple story-like experience that ends with a personal final message.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+✨ # Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+💌 Minimal and modern landing page
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🎁 Interactive step-by-step gift experience
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+➡️ Next-step navigation
 
-## Learn More
+⬅️ Previous-step / Back navigation
 
-To learn more about Next.js, take a look at the following resources:
+✨ Smooth animations and transitions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+💗 Soft romantic visual design
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🌈 Gradient background decorations
 
-## Deploy on Vercel
+🪟 Glassmorphism-inspired UI elements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📱 Responsive design for different screen sizes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+⚡ Fast navigation with Next.js
+
+🧩 Reusable React components
+
+🔐 No authentication required
+
+🗄️ No database required
+
+🌐 No external API required
+
+🛠️ # Technologies Used
+
+Next.js
+
+React
+
+JavaScript
+
+JSX
+
+Tailwind CSS
