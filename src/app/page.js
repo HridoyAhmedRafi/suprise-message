@@ -1,69 +1,89 @@
-import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.js
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#fffdfd] px-6 py-12">
+      {/* Background glow */}
+      <div className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-rose-100/50 blur-[100px]" />
+
+      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-violet-100/50 blur-[100px]" />
+
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink-50/50 blur-[100px]" />
+
+      {/* Floating decorations */}
+      <div className="pointer-events-none absolute inset-0">
+        <span className="absolute left-[8%] top-[18%] animate-bounce text-xl text-rose-200">
+          ♡
+        </span>
+
+        <span className="absolute left-[18%] top-[70%] animate-pulse text-sm text-violet-200">
+          ✦
+        </span>
+
+        <span className="absolute right-[10%] top-[22%] animate-pulse text-lg text-pink-200">
+          ✧
+        </span>
+
+        <span className="absolute bottom-[22%] right-[18%] animate-bounce text-xl text-rose-200">
+          ♡
+        </span>
+
+        <span className="absolute left-[50%] top-[10%] text-xs text-pink-200">
+          ✦
+        </span>
+
+        <span className="absolute bottom-[12%] right-[45%] text-xs text-violet-200">
+          ✧
+        </span>
+      </div>
+
+      {/* Main content */}
+      <section className="relative z-10 w-full max-w-xl text-center">
+        <div className="relative mx-auto mb-8 flex h-24 w-24 items-center justify-center">
+          <div className="absolute inset-0 animate-ping rounded-full bg-pink-100/40 [animation-duration:3s]" />
+
+          <div className="relative flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-rose-50 via-pink-50 to-violet-50 shadow-[0_12px_40px_rgba(244,114,182,0.15)]">
+            <span className="text-5xl">💌</span>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-rose-400">
+          JUST A LITTLE SOMETHING
+        </p>
+
+        <h1 className="mt-5 text-4xl font-semibold tracking-[-0.04em] text-gray-900 sm:text-5xl">
+          Wait...
+        </h1>
+
+        <p className="mt-5 text-lg leading-8 text-gray-500">
+          I made something for you.
+          <br />
+          But there&apos;s one tiny problem...
+        </p>
+
+        <p className="mt-2 text-sm text-gray-400">
+          you have to find it. <span className="text-rose-400">♡</span>
+        </p>
+
+        <Link
+          href="/gift"
+          className="group relative mt-9 inline-flex items-center gap-3 overflow-hidden rounded-full border border-rose-200 bg-white px-7 py-3.5 text-sm font-medium text-rose-400 shadow-[0_10px_35px_rgba(244,114,182,0.14)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:border-pink-300 hover:text-rose-500 hover:shadow-[0_15px_45px_rgba(244,114,182,0.25)] active:scale-95"
+        >
+          <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-pink-200/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+          <span className="relative text-base transition-all duration-300 group-hover:scale-125">
+            💗
+          </span>
+
+          <span className="relative">Open Your Gift</span>
+
+          <span className="relative text-lg transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </span>
+        </Link>
+      </section>
+    </main>
   );
-}
+};
+
+export default HomePage;
