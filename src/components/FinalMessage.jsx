@@ -5,9 +5,12 @@ const FinalMessage = ({ onBack }) => {
       <button
         type="button"
         onClick={onBack}
-        className="absolute left-0 top-0 inline-flex items-center gap-2 rounded-full border border-rose-100 bg-white/80 px-4 py-2 text-sm font-medium text-rose-400 shadow-[0_6px_20px_rgba(244,114,182,0.08)] backdrop-blur-sm transition-all duration-300 hover:-translate-x-1 hover:border-rose-200 hover:bg-rose-50/70"
+        className="group absolute left-0 top-0 z-20 inline-flex cursor-pointer items-center gap-2 rounded-full border border-rose-200 bg-white/90 px-4 py-2 text-sm font-medium text-rose-400 shadow-[0_6px_20px_rgba(244,114,182,0.1)] backdrop-blur-sm transition-all duration-300 hover:-translate-x-1 hover:border-rose-300 hover:bg-rose-50 hover:text-rose-500 hover:shadow-[0_8px_25px_rgba(244,114,182,0.16)] active:scale-95"
       >
-        <span>←</span>
+        <span className="transition-transform duration-300 group-hover:-translate-x-1">
+          ←
+        </span>
+
         <span>Back</span>
       </button>
 

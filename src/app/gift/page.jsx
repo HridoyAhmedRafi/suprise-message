@@ -19,6 +19,7 @@ const GiftPage = () => {
 
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#fffdfd] px-6 py-12">
+      {/* Background */}
       <BackgroundDecor />
 
       <section className="relative z-10 w-full max-w-xl text-center">
@@ -48,26 +49,33 @@ const GiftPage = () => {
             </p>
 
             <p className="mt-2 text-sm text-gray-400">
-              you have to find it. <span className="text-rose-400">♡</span>
+              you have to find it.{" "}
+              <span className="text-rose-400">♡</span>
             </p>
 
+            {/* Find it button */}
             <button
               type="button"
               onClick={nextStep}
-              className="group relative mt-9 inline-flex items-center gap-3 overflow-hidden rounded-full border border-rose-200 bg-white px-7 py-3.5 text-sm font-medium text-rose-400 shadow-[0_10px_35px_rgba(244,114,182,0.14)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:border-pink-300 hover:text-rose-500 hover:shadow-[0_15px_45px_rgba(244,114,182,0.25)] active:scale-95"
+              className="group relative mt-9 inline-flex cursor-pointer animate-[gentleFloat_3s_ease-in-out_infinite] items-center gap-3 overflow-hidden rounded-full border border-rose-300 bg-gradient-to-r from-white to-rose-50 px-7 py-3.5 text-sm font-semibold text-rose-500 shadow-[0_10px_35px_rgba(244,114,182,0.18)] transition-all duration-300 hover:animate-none hover:-translate-y-1 hover:scale-[1.05] hover:border-rose-400 hover:shadow-[0_16px_45px_rgba(244,114,182,0.28)] active:translate-y-0 active:scale-95"
             >
-              <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-pink-200/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+              {/* Shine */}
+              <span className="pointer-events-none absolute inset-y-0 -left-20 w-16 -skew-x-12 bg-white/70 transition-all duration-700 group-hover:left-[120%]" />
 
-              <span className="relative text-base transition-all duration-300 group-hover:scale-125">
+              <span className="relative text-base transition-transform duration-300 group-hover:scale-125">
                 💗
               </span>
 
               <span className="relative">Find it</span>
 
-              <span className="relative text-lg transition-transform duration-300 group-hover:translate-x-1">
+              <span className="relative text-lg transition-transform duration-300 group-hover:translate-x-1.5">
                 →
               </span>
             </button>
+
+            <p className="mt-3 animate-pulse text-xs text-rose-300">
+              Click to continue
+            </p>
           </div>
         )}
 
